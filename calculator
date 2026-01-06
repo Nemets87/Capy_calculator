@@ -1,0 +1,23 @@
+def calculate(a, op, b):
+ 
+    if op == '/' and b == 0:
+        return "Деление на ноль!"
+    
+    elif op == '+': return a + b
+    elif op == '-': return a - b
+    elif op == '*': return a * b
+    elif op == '/': return round(a / b, 3)
+    else:
+        return "Неверный оператор"
+ 
+    
+ 
+def main():
+    try:
+        a, op, b = float(input("Число: ")), input("Оператор: "), float(input("Число: "))
+        print(f"Результат: {calculate(a, op, b)}")
+    except ValueError:
+        print("Вводи числа корректно!")
+ 
+if __name__ == "__main__":
+    main()
